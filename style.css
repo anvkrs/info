@@ -1,0 +1,135 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+header {
+  background:rgb(114, 144, 168); 
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #022758;
+  margin-bottom: 20px;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-bottom: 20px;
+}
+
+/* For larger screens, make it horizontal */
+@media(min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .profile-pic {
+    margin-right: 30px;
+  }
+
+  .profile-pic img {
+    margin-bottom: 0;
+  }
+}
+
+.research ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.pub-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.pub-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pub-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.pub-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.pub-card p {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.pub-card .year {
+  font-weight: bold;
+  color: #093e83;
+}
+
+footer {
+  background-color: #5394e9;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.load-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 25px;
+  font-size: 1rem;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #4181d4;
+}
+
