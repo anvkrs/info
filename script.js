@@ -4,7 +4,7 @@ const navLinks = document.getElementById("navLinks");
 
 let publications = [];
 let currentIndex = 0;
-const pageSize = 4; 
+const pageSize = 6; 
 
 menuToggle.addEventListener("click", (event) => {
   event.stopPropagation(); // prevent click from closing immediately
