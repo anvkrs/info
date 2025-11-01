@@ -3,10 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="media/favicon.png" type="image/png">
   <title>Prof. A.N. Vijayakumar | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="logo">ANVK</a>
+
+    <!-- Hamburger icon -->
+    <img src="media/menu.png" alt="menu" class="menu-icon" id="menuToggle">
+
+    <ul id="navLinks">
+      <li><a href="#About">About</a></li>
+      <li><a href="#Research">Research Interests</a></li>
+      <li><a href="#Publications">Publications</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
 
 <header>
   <div class="container header-content">
@@ -22,12 +40,12 @@
   </div>
 </header>
 
-  <section class="about container">
+  <section id="About" class="about container">
     <h2>About Me</h2>
     <p>I am a Professor of Finance & Entrepreneurship at Central University of Karnataka, specializing in price risk, derivatives, and investment management. My research focuses on agricultural finance, commodity markets, and farmer producer organisations in India. Previously, I have worked with various academic institutions, receiving recognition for my research in commodity markets and corporate governance.</p>
   </section>
 
-  <section class="research container">
+  <section id="Research" class="research container">
     <h2>Research Interests</h2>
     <ul>
       <li>Price Risk & Derivatives: Research on hedging and futures contracts.</li>
@@ -37,14 +55,14 @@
     </ul>
   </section>
 
-  <section class="publications container">
+  <section id="Publications" class="publications container">
     <h2>Publications</h2>
     <div id="pubList" class="pub-list">
       <!-- Publications will be loaded here via JS -->
     </div>
   </section>
 
-  <section class="contact container">
+  <section id="Contact" class="contact container">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:vkr@cuk.ac.in">vkr@cuk.ac.in</a></p>
     <p>Office: Dept of Business Studies, Central University of Karnataka</p>

@@ -1,7 +1,20 @@
 const pubList = document.getElementById('pubList');
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
 let publications = [];
 let currentIndex = 0;
-const pageSize = 8; // Number of publications per page
+const pageSize = 4; 
+
+menuToggle.addEventListener("click", (event) => {
+  event.stopPropagation(); // prevent click from closing immediately
+  navLinks.classList.toggle("show");
+});
+
+document.addEventListener("click", (event) => {
+  navLinks.classList.remove("show");
+});
+
 
 // Fetch publications from JSON
 fetch('publish.json')
@@ -21,8 +34,12 @@ function loadPublications() {
     const card = document.createElement('div');
     card.classList.add('pub-card');
     card.innerHTML = `
-      <h3>${pub.title}</h3>
-      <p><strong>Authors:</strong> ${pub.authors}</p>
+      <h3>
+       <a href="${pub.link}" target="_blank" rel="noopener noreferrer">
+        ${pub.title}
+      </a>
+      </h3>
+      <p><strong>Authors:</strong> ${pub.author}</p>
       <p><strong>Journal:</strong> ${pub.journal}</p>
       <p class="year"><strong>Year:</strong> ${pub.year} | <strong>Cited by:</strong> ${pub.cited}</p>
     `;

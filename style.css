@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,6 +7,83 @@ body {
   background-color: #fdfdfd;
   color: #333;
 }
+
+/* ===== Base Navbar ===== */
+nav {
+  width: 100%;
+  height: 55px;
+  background-color: rgb(30, 80, 121);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Days One',Segoe UI;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+nav li a:hover {
+  color: #ffd700;
+}
+
+/* ===== Hamburger icon ===== */
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+  
+    top: 55px;
+    left: 0px;
+    width: 100%;
+    background-color: rgb(30, 80, 121);
+    padding: 10px 20px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
 
 .container {
   width: 90%;
@@ -96,7 +174,12 @@ section h2 {
 .pub-card h3 {
   font-size: 1.1rem;
   margin-bottom: 5px;
-  color: #333;
+  color: #d61111;
+}
+
+.pub-card h3 a{
+  text-decoration: none;
+  color: #093e83;
 }
 
 .pub-card p {
