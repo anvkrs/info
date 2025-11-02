@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,71 +9,149 @@
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-  <div class="nav-container">
-    <a href="index.html" class="logo">ANVK</a>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">ANVK</a>
 
-    <!-- Hamburger icon -->
-    <img src="media/menu.png" alt="menu" class="menu-icon" id="menuToggle">
+      <!-- Hamburger icon -->
+      <img src="media/menu.png" alt="menu" class="menu-icon" id="menuToggle">
 
-    <ul id="navLinks">
-      <li><a href="#About">About</a></li>
-      <li><a href="#Research">Research Interests</a></li>
-      <li><a href="#Publications">Publications</a></li>
-      <li><a href="#Contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-
-<header>
-  <div class="container header-content">
-    <div class="profile-pic">
-      <img src="media/profile.png" alt="Prof. A.N. Vijayakumar">
+      <ul id="navLinks">
+        <li><a href="#About">About</a></li>
+        <li><a href="#Research">Research Interests</a></li>
+        <li><a href="#Publications">Publications</a></li>
+        <li><a href="#ResearchC">Research / Consultation Participation</a></li>
+        <li><a href="#Books">Books / Included Works</a></li>
+        <li><a href="#Projects">Conferences and Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
     </div>
-    <div class="header-text">
-      <h1>Prof. A.N. Vijayakumar</h1>
-      <p>Professor, Finance & Entrepreneurship</p>
-      <p>Dept of Business Studies, Central University of Karnataka</p>
-      <p>Email: <a href="mailto:vkr@cuk.ac.in">vkr@cuk.ac.in</a></p>
+  </nav>
+
+
+  <header>
+    <div class="container header-content">
+      <div class="profile-pic">
+        <img src="media/profile.png" alt="Prof. A.N. Vijayakumar">
+      </div>
+      <div class="header-text">
+        <h1>Prof. A.N. Vijayakumar</h1>
+        <p>Professor, Finance & Entrepreneurship</p>
+        <p>Dept of Business Management, Central University of Karnataka</p>
+        <p>Email: <a href="mailto:vkr@cuk.ac.in">vkr@cuk.ac.in</a></p>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <section id="About" class="about container">
-    <h2>About Me</h2>
-    <p>I am a Professor of Finance & Entrepreneurship at Central University of Karnataka, specializing in price risk, derivatives, and investment management. My research focuses on agricultural finance, commodity markets, and farmer producer organisations in India. Previously, I have worked with various academic institutions, receiving recognition for my research in commodity markets and corporate governance.</p>
+    <h3 class="about-heading">About Me</h3>
+    <audio id="about-audio" src="media/About.mp3"></audio>
+    <p>
+      I am a <strong>Professor of Finance and Entrepreneurship</strong> at the
+      <strong>Central University of Karnataka</strong>, specializing in
+      <strong>financial markets</strong> including <em>equities, commodities, and currency exchanges</em>.
+      My academic and research interests include <strong>derivatives</strong>,
+      <strong>price risk management</strong>, <strong>option valuation</strong>, and
+      <strong>sustainable finance</strong>.
+    </p>
+    <br>
+    <p>
+      My research primarily focuses on <strong>agricultural finance</strong>,
+      <strong>commodity markets</strong>, and <strong>Farmer Producer Organisations (FPOs)</strong> in India,
+      aiming to strengthen rural and institutional financial ecosystems. I have also contributed to
+      the study of <strong>Indian management ethos</strong>, <strong>corporate governance</strong>,
+      and <strong>entrepreneurial development</strong>.
+    </p>
+    <br>
+    <p>
+      Over the years, I have been associated with several reputed academic institutions
+      and have received recognition for my research contributions in
+      <strong>commodity markets</strong>, <strong>derivatives</strong>, and
+      <strong>financial risk management</strong>.
+    </p>
   </section>
 
   <section id="Research" class="research container">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Price Risk & Derivatives: Research on hedging and futures contracts.</li>
-      <li>Green Finance: Sustainable finance for rural development.</li>
-      <li>Investment Management: Efficiency of capital and portfolio management.</li>
-      <li>Entrepreneurship: Empowering small and marginal farmers through FPOs.</li>
-    </ul>
+    <h3>Research Interests</h3>
+      <div class="research-tags">
+        <span>Derivatives</span>
+        <span>Price Risk</span>
+        <span>Green Finance</span>
+        <span>Investments</span>
+        <span>Entrepreneurship</span>
+        <span>FPOs</span>
+        <span>Governance</span>
+        <span>Sustainability</span>
+        <span>Ethos</span>
+    </div>
   </section>
 
   <section id="Publications" class="publications container">
-    <h2>Publications</h2>
+    <h3>Publications</h3>
     <div id="pubList" class="pub-list">
       <!-- Publications will be loaded here via JS -->
     </div>
   </section>
 
+  <section id="ResearchC" class="research container">
+    <h3>Research / Consultation Participation</h3>
+    <div id="recList" class="rec-list">
+      <!-- Publications will be loaded here via JS -->
+    </div>
+  </section>
+
+  <section id="Books" class="books container">
+    <h3>Books / Included Works</h3>
+    <div id="bookList" class="book-list">
+      <!-- Publications will be loaded here via JS -->
+    </div>
+  </section>
+
+  <section id="Projects" class="projects container">
+    <h3>Conferences and Projects</h3>
+    <div id="proList" class="pro-list">
+      <!-- Publications will be loaded here via JS -->
+    </div>
+  </section>
+
+
+
   <section id="Contact" class="contact container">
-    <h2>Contact</h2>
+    <h3>Contact</h3>
     <p>Email: <a href="mailto:vkr@cuk.ac.in">vkr@cuk.ac.in</a></p>
-    <p>Office: Dept of Business Studies, Central University of Karnataka</p>
+    <p>Office: Dept of Business Management, Central University of Karnataka</p>
   </section>
 
   <footer>
-    <p>© 2025 Prof. A.N. Vijayakumar | Central University of Karnataka</p>
+    <div class="footer-content">
+      <div class="footer-section contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:vkr@cuk.ac.in" style="color: wheat;">vkr@cuk.ac.in</a></p>
+        <p>Office: Dept. of Business Management,<br>Central University of Karnataka</p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Research">Research Interests</a></li>
+          <li><a href="#Publications">Publications</a></li>
+          <li><a href="#ResearchC">Research / Consultation Participation</a></li>
+          <li><a href="#Books">Books / Included Works</a></li>
+          <li><a href="#Projects">Conferences and Projects</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 <strong>Prof. A.N. Vijayakumar</strong> | Central University of Karnataka
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
