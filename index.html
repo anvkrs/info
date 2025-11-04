@@ -23,10 +23,11 @@
         <li><a href="#About">About</a></li>
         <li><a href="#Teaching">Teaching</a></li>
         <li><a href="#Publications">Research Publications</a></li>
-        <li><a href="#ResearchC">Research / Consultative projects</a></li>
+        <li><a href="#Projects">Research / Consultative projects</a></li>
         <li><a href="#Training">Training</a></li>
         <li><a href="#Conferences">Invited Seminar and Conferences</a></li>
         <li><a href="#Academic">Academic Positions</a></li>
+        <li><a href="#Gallery">Gallery</a></li>
         <li><a href="#Contact">Contact</a></li>
       </ul>
     </div>
@@ -76,24 +77,47 @@
       <strong>Karnataka State Agricultural Prices Commission</strong>, Government of Karnataka,
       in addition to organizations such as the <strong>ICSSR, ICAR,</strong> and others.
     </p>
+    <ul>
+      <li>
+        <a href="https://scholar.google.com/citations?user=zG6UkeYAAAAJ&hl=en">
+          <img src="media/Google_Scholar_logo.svg" alt="Google Scholar">
+          Google Scholar
+        </a>
+      </li>
+      <li>
+        <a href="https://orcid.org/0000-0003-2319-2132">
+          <img src="media/ORCID_iD.svg" alt="ORCID">
+          ORCID
+        </a>
+      </li>
+    </ul>
   </section>
-
 
   <section id="Teaching" class="teaching container">
     <h3>Teaching</h3>
     <div id="teachList" class="teach-list">
-      <ol class="teach-list">
-        <li>Investment Management</li>
-        <li>Derivatives and Price Risk Management</li>
-        <li>Project Finance and Appraisal</li>
-        <li>Strategic Management</li>
-        <li>Financial Inclusion and FinTech</li>
-        <li>Financial Management</li>
-        <li>Financial Markets</li>
-        <li>Entrepreneurship and Business Management</li>
-        <li>Corporate Financial Reporting and Financial Statement Analysis</li>
-        <li>Research Methodology</li>
-      </ol>
+      <table class="teach-table">
+        <tr>
+          <td>1. Investment Management</td>
+          <td>2. Financial Management</td>
+        </tr>
+        <tr>
+          <td>3. Strategic Management</td>
+          <td>4. Financial Markets</td>
+        </tr>
+        <tr>
+          <td>5. Project Finance and Appraisal</td>
+          <td>6. Research Methodology</td>
+        </tr>
+        <tr>
+          <td>7. Derivatives and Price Risk Management</td>
+          <td>8. Financial Inclusion and FinTech</td>
+        </tr>
+        <tr>
+          <td>9. Entrepreneurship and Business Management</td>
+          <td>10. Corporate Financial Reporting and Financial Statement Analysis</td>
+        </tr>
+      </table>
     </div>
   </section>
 
@@ -104,11 +128,25 @@
     </div>
   </section>
 
-  <section id="ResearchC" class="research container">
+  <section id="Projects" class="projects container">
     <h3>Research / Consultative projects</h3>
-    <div id="recList" class="rec-list">
-      <!-- Publications will be loaded here via JS -->
+    <!-- Filters -->
+    <div class="filters">
+      <select id="typeFilter">
+        <option value="">All Types</option>
+        <option value="Research Project">Research Project</option>
+        <option value="Consultancy">Consultancy</option>
+      </select>
+
+      <select id="statusFilter">
+        <option value="">All Status</option>
+        <option value="Ongoing">Ongoing</option>
+        <option value="Completed">Completed</option>
+      </select>
     </div>
+
+    <div id="projectList" class="project-list"></div>
+ 
   </section>
 
   <section id="Training" class="training container">
@@ -132,6 +170,13 @@
     </div>
   </section>
 
+  <section id="Gallery" class="gallery container">
+    <h3>Gallery</h3>
+    <div id="galleryList" class="gallery-list">
+      <!-- Publications will be loaded here via JS -->
+    </div>
+  </section>
+
   <section id="Contact" class="contact container">
     <h3>Contact</h3>
     <p>Email: <a href="mailto:vkr@cuk.ac.in">vkr@cuk.ac.in</a></p>
@@ -150,11 +195,14 @@
         <h3>Quick Links</h3>
         <ul>
           <li><a href="#About">About</a></li>
-          <li><a href="#Research">Research Interests</a></li>
-          <li><a href="#Publications">Publications</a></li>
-          <li><a href="#ResearchC">Research / Consultation Participation</a></li>
-          <li><a href="#Books">Books / Included Works</a></li>
-          <li><a href="#Projects">Conferences and Projects</a></li>
+          <li><a href="#Teaching">Teaching</a></li>
+          <li><a href="#Publications">Research Publications</a></li>
+          <li><a href="#Projects">Research / Consultative projects</a></li>
+          <li><a href="#Conferences">Invited Seminar and Conferences</a></li>
+          <li><a href="#Training">Training</a></li>
+          <li><a href="#Academic">Academic Positions</a></li>
+          <li><a href="#Gallery">Gallery</a></li>
+          <li><a href="#Contact">Contact</a></li>
         </ul>
       </div>
     </div>
