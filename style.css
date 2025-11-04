@@ -217,6 +217,50 @@ section h3 {
   margin-left: 20px;
 }
 
+
+
+/* ===== Teaching Section Styles ===== */
+
+/* Teaching List */
+.teach-list {
+  counter-reset: item;
+  list-style: none;
+  padding-left: 0;
+}
+
+.teach-list li {
+  counter-increment: item;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  padding-left: 40px;
+  border-bottom: 1px dashed #ddd;
+  font-size: 1rem;
+  position: relative;
+}
+
+.teach-list li::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  color: #1a3c6e;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 25px;
+  text-align: right;
+}
+
+/* Hover effect */
+.teach-list li:hover {
+  color: #1a3c6e;
+  cursor: default;
+  background-color: #f2f6fc;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+/* ------------------ */
+
+
 .pub-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
