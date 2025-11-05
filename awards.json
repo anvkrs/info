@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "awarding_body": "IPA – USA & Asian Development Bank",
+    "award_name": "International Travel Grant",
+    "level": "International",
+    "date": "2012-06-01",
+    "description": "Awarded for participation in an international academic event supported by ADB."
+  },
+  {
+    "id": 2,
+    "awarding_body": "World Education Congress",
+    "award_name": "National Education Leadership Award – Best Professor in Financial Management",
+    "level": "National",
+    "date": "2014-07-01",
+    "description": "Recognized for excellence in teaching and leadership in financial management education."
+  },
+  {
+    "id": 3,
+    "awarding_body": "The Economist",
+    "award_name": "Feeding the World 2012: Africa’s Role in Saving the Global Food Crisis – Paper Recognition",
+    "level": "International",
+    "date": "2012-06-01",
+    "description": "Acknowledged for contribution to international discourse on global food security."
+  }
+]

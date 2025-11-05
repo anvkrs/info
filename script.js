@@ -151,6 +151,52 @@ function renderSeminars (reset = false) {
   manageLoadMoreButton('seminar', filtered.length, renderSeminars)
 }
 
+
+// ---------------- AWARDS ----------------
+let awards = [];
+let awardIndex = 0;
+const awardPageSize = 6;
+
+async function loadAwards() {
+  const res = await fetch('awards.json');
+  awards = await res.json();
+  renderAwards(true);
+}
+
+function renderAwards(reset = false) {
+  const awardsList = document.getElementById('awardsList');
+  if (reset) {
+    awardIndex = 0;
+    awardsList.innerHTML = '';
+  }
+
+  const nextIndex = awardIndex + awardPageSize;
+  const toRender = awards.slice(awardIndex, nextIndex);
+
+  toRender.forEach(a => {
+    const card = document.createElement('div');
+    card.classList.add('award-card');
+    card.innerHTML = `
+      <p class="award-description">${a.description}</p>
+      <p><img src="media/icons_awards/awarding_body.png" alt="Awarding Body"> ${a.awarding_body}</p>
+
+      <div class="award-info">
+        <p><img src="media/icons_awards/award.png" alt="Award"> ${a.award_name}</p>
+        <p><img src="media/icons_awards/level.png" alt="Level"> ${a.level}</p>
+        <p><img src="media/icons_awards/date.png" alt="Date"> ${a.date}</p>
+      </div>
+    `;
+    awardsList.appendChild(card);
+  });
+
+  awardIndex = nextIndex;
+  manageLoadMoreButton('award', awards.length, renderAwards);
+}
+
+// Initial Load
+loadAwards();
+
+
 // =============================================================
 // ------------------------------ PUBLICATIONS -----------------
 // =============================================================
@@ -243,3 +289,5 @@ document
 loadProjects()
 loadSeminars()
 loadPublications()
+
+

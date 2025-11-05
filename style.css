@@ -527,6 +527,70 @@ section h3 {
 }
 
 
+/* ---------------- AWARDS ---------------- */
+.awards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.award-card {
+  background: #fbfbff;
+  padding: 18px 22px;
+  border-radius: 16px;
+  border: 1.5px solid #e8e8f0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.award-card h3 {
+  font-size: 1rem;
+  color: #093e83;
+  margin-bottom: 10px;
+  text-decoration: underline dashed #4995f8d2 1px;
+}
+
+.award-card p {
+  font-size: 0.9rem;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.award-card img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+/* Description styling */
+.award-description {
+  margin-bottom: 8px;
+  color: #444;
+  font-style: italic;
+}
+
+/* Inline details */
+.award-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+
+
+
+/* footer  */
 footer {
   background: linear-gradient(
     125deg,
