@@ -291,3 +291,28 @@ loadSeminars()
 loadPublications()
 
 
+// ---------------- GALLERY ----------------
+const galleryWrapper = document.querySelector(".gallery-wrapper");
+const galleryList = document.getElementById("galleryList");
+
+// Create modal
+const modal = document.createElement("div");
+modal.className = "gallery-modal";
+const modalImg = document.createElement("img");
+modal.appendChild(modalImg);
+document.body.appendChild(modal);
+
+// Handle click
+galleryList.addEventListener("click", (e) => {
+  if (e.target.tagName === "IMG") {
+    modalImg.src = e.target.src;
+    modal.style.display = "flex";
+    galleryList.style.animationPlayState = "paused";
+  }
+});
+
+// Close modal and reset animation
+modal.addEventListener("click", () => {
+  modal.style.display = "none";
+  galleryList.style.animationPlayState = "running";
+});
