@@ -146,7 +146,7 @@
     </div>
 
     <div id="projectList" class="project-list"></div>
- 
+
   </section>
 
   <section id="Training" class="training container">
@@ -158,9 +158,19 @@
 
   <section id="Conferences" class="Conferences container">
     <h3>Invited Seminars and Conferences</h3>
-    <div id="conList" class="con-list">
-      <!-- Publications will be loaded here via JS -->
+
+    <div class="filters">
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="National">National</option>
+        <option value="International (within country)">International (within country)</option>
+      </select>
     </div>
+
+    <div id="seminarList" class="seminar-list">
+      <!-- Seminar cards will be loaded here -->
+    </div>
+
   </section>
 
   <section id="Academic" class="academic container">

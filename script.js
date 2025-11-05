@@ -127,6 +127,84 @@ document
 // Initial Load
 loadProjects()
 
+// ---------------- SEMINARS ----------------
+let seminars = [];
+let seminarIndex = 0;
+const seminarPageSize = 6;
+
+async function loadSeminars() {
+  const res = await fetch('seminar.json');
+  seminars = await res.json();
+  renderSeminars(true);
+}
+
+function renderSeminars(reset = false) {
+  const seminarList = document.getElementById('seminarList');
+  if (reset) {
+    seminarIndex = 0;
+    seminarList.innerHTML = '';
+  }
+
+  const categoryFilter = document.getElementById('categoryFilter');
+
+  const filtered = seminars.filter(s => {
+    const categoryMatch = !categoryFilter?.value || s.category === categoryFilter.value;
+    return categoryMatch;
+  });
+
+  const nextIndex = seminarIndex + seminarPageSize;
+  const toRender = filtered.slice(seminarIndex, nextIndex);
+
+  toRender.forEach(s => {
+    const card = document.createElement('div');
+    card.classList.add('seminar-card');
+    card.innerHTML = `
+      <h3>${s.title}</h3>
+
+      <div class="seminar-details">
+    
+      <p><img src="media/icons_seminar/category.png" alt="Category"> 
+      ${s.category}</p>
+      
+      <p><img src="media/icons_seminar/organizer.png" alt="Organizer"> 
+      ${s.organizer}</p>
+      
+      <p class="date-label"><img src="media/icons_seminar/date.png" alt="Date"> 
+       ${s.date}</p>
+      </div>
+    `;
+    seminarList.appendChild(card);
+  });
+
+  seminarIndex = nextIndex;
+  manageLoadMoreButton('seminar', filtered.length, renderSeminars);
+}
+
+function manageLoadMoreButton(type, total, loadFn) {
+  const existingBtn = document.getElementById(`${type}-loadMoreBtn`);
+  const current = type === 'seminar' ? seminarIndex : projectIndex;
+
+  if (current < total) {
+    if (!existingBtn) {
+      const btn = document.createElement('button');
+      btn.id = `${type}-loadMoreBtn`;
+      btn.textContent = 'Load More';
+      btn.classList.add('load-more-btn');
+      btn.addEventListener('click', () => loadFn());
+      if (type === 'seminar') seminarList.parentElement.appendChild(btn);
+    }
+  } else if (existingBtn) {
+    existingBtn.remove();
+  }
+}
+
+// Filters
+document.getElementById('categoryFilter')?.addEventListener('change', () => renderSeminars(true));
+
+// Initial Load
+loadSeminars();
+
+
 // ------------------------------------- PUBLICATIONS
 let publications = []
 let pubIndex = 0
