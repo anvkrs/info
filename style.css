@@ -645,49 +645,54 @@ section h3 {
 }
 
 
-
-/* footer  */
+/* ========== FOOTER ========== */
 footer {
-  background: linear-gradient(
-    125deg,
-    rgb(15, 56, 131),
-    rgb(26, 26, 107),
-    darkblue,
-    rgb(52, 29, 136) 100%
-  );
+  background: linear-gradient(125deg, rgb(15, 56, 131), rgb(26, 26, 107), darkblue, rgb(52, 29, 136));
   color: white;
-  padding: 40px 20px;
+  padding: 40px 8%;
   font-family: 'Lato', sans-serif;
 }
 
+/* --- Top content --- */
 .footer-content {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+  gap: 25px; /* reduced gap */
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .footer-section {
-  max-width: 300px;
-  margin: 10px;
+  flex: 1 1 300px;
+  min-width: 220px;
 }
 
 .footer-section h3 {
   color: #f5f5f5;
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   border-bottom: 2px solid #fff;
   display: inline-block;
   padding-bottom: 4px;
 }
 
 .footer-section p {
-  font-size: 0.95em;
+  font-size: 0.9em;
   line-height: 1.5;
+  margin: 6px 0;
 }
 
+.footer-email {
+  color: wheat;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-email:hover {
+  color: #fff3b0;
+}
+
+/* --- Quick Links --- */
 .footer-section ul {
   list-style: none;
   padding: 0;
@@ -695,13 +700,13 @@ footer {
 }
 
 .footer-section ul li {
-  margin: 6px 0;
+  margin: 5px 0;
 }
 
 .footer-section ul li a {
   color: #cfd8ff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer-section ul li a:hover {
@@ -709,15 +714,46 @@ footer {
   text-decoration: underline;
 }
 
+/* --- Bottom line --- */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  margin-top: 20px;
-  padding-top: 10px;
-  font-size: 0.9em;
   text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  font-size: 0.85em;
   opacity: 0.9;
 }
 
+/* --- Mobile Optimization --- */
+@media (max-width: 768px) {
+  footer {
+    padding: 25px 20px; /* reduced padding for mobile */
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 15px; /* smaller gap on mobile */
+    margin-bottom: 10px;
+  }
+
+  .footer-section {
+    margin-bottom: 10px;
+  }
+
+  .footer-section h3 {
+    border: none;
+    margin-bottom: 5px;
+    font-size: 1em;
+  }
+
+  .footer-section p,
+  .footer-section ul li a {
+    font-size: 0.85em;
+  }
+}
+
+/* load more btn  */
 .load-more-btn {
   display: block;
   margin: 20px auto;
