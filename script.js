@@ -177,7 +177,7 @@ function renderAwards(reset = false) {
     const card = document.createElement('div');
     card.classList.add('award-card');
     card.innerHTML = `
-      <p class="award-description">${a.description}</p>
+      <h3 class="award-description">${a.description}</h3>
       <p><img src="media/icons_awards/awarding_body.png" alt="Awarding Body"> ${a.awarding_body}</p>
 
       <div class="award-info">

@@ -549,10 +549,9 @@ section h3 {
 }
 
 .award-card h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #093e83;
   margin-bottom: 10px;
-  text-decoration: underline dashed #4995f8d2 1px;
 }
 
 .award-card p {
@@ -570,13 +569,6 @@ section h3 {
   height: 18px;
   object-fit: contain;
   opacity: 0.8;
-}
-
-/* Description styling */
-.award-description {
-  margin-bottom: 8px;
-  color: #444;
-  font-style: italic;
 }
 
 /* Inline details */
