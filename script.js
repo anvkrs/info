@@ -293,7 +293,9 @@ loadPublications()
 
 // ---------------- GALLERY ----------------
 const galleryWrapper = document.querySelector(".gallery-wrapper");
-const galleryList = document.getElementById("galleryList");
+const galleryList1 = document.getElementById("galleryList1");
+const galleryList2 = document.getElementById("galleryList2");
+const galleryList3 = document.getElementById("galleryList3");
 
 // Create modal
 const modal = document.createElement("div");
@@ -302,17 +304,53 @@ const modalImg = document.createElement("img");
 modal.appendChild(modalImg);
 document.body.appendChild(modal);
 
+// galleryList1
+
 // Handle click
-galleryList.addEventListener("click", (e) => {
+galleryList1.addEventListener("click", (e) => {
   if (e.target.tagName === "IMG") {
     modalImg.src = e.target.src;
     modal.style.display = "flex";
-    galleryList.style.animationPlayState = "paused";
+    galleryList1.style.animationPlayState = "paused";
   }
 });
 
 // Close modal and reset animation
 modal.addEventListener("click", () => {
   modal.style.display = "none";
-  galleryList.style.animationPlayState = "running";
+  galleryList1.style.animationPlayState = "running";
+});
+
+// galleryList2
+
+// Handle click
+galleryList2.addEventListener("click", (e) => {
+  if (e.target.tagName === "IMG") {
+    modalImg.src = e.target.src;
+    modal.style.display = "flex";
+    galleryList2.style.animationPlayState = "paused";
+  }
+});
+
+// Close modal and reset animation
+modal.addEventListener("click", () => {
+  modal.style.display = "none";
+  galleryList2.style.animationPlayState = "running";
+});
+
+// galleryList3
+
+// Handle click
+galleryList3.addEventListener("click", (e) => {
+  if (e.target.tagName === "IMG") {
+    modalImg.src = e.target.src;
+    modal.style.display = "flex";
+    galleryList3.style.animationPlayState = "paused";
+  }
+});
+
+// Close modal and reset animation
+modal.addEventListener("click", () => {
+  modal.style.display = "none";
+  galleryList3.style.animationPlayState = "running";
 });

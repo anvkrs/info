@@ -591,9 +591,13 @@ section h3 {
 .gallery-list {
   display: flex;
   width: max-content;
+  padding-top: 7px;
+  padding-bottom: 7px;
   animation: scrollGallery 50s linear infinite;
 }
-
+.rev{
+  animation: scrollGalleryrev 50s linear infinite;
+}
 .gallery-list img {
   width: 230px;
   height: 150px;
@@ -616,6 +620,15 @@ section h3 {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollGalleryrev {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 
