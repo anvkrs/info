@@ -580,6 +580,10 @@ section h3 {
 }
 
 /* ---------------- GALLERY ---------------- */
+.gallery h3{
+  margin-top: 20px;
+  margin-left: 5px;
+}
 .gallery-wrapper {
   width: 100%;
   overflow: hidden;
