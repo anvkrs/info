@@ -75,5 +75,12 @@
       "date": "2004-08-27",
       "category": "International (within country)",
       "organizer": "International Conference on Integrated Financial Sector in the SAARC Region"
+    },
+    {
+      "id": 12,
+      "title": "FinTech and Blockchain Technology",
+      "date": "205-12-11",
+      "category": "National",
+      "organizer": "Sharnbasva University"
     }
 ]
